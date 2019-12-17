@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceSynchroCheckers" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceSynchroCheckers" />
+      <xsd:import schemaLocation="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ServiceSynchroCheckers.Class" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceSynchroCheckers_GetUserByIdUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetUserByIdUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetUsersAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetUsersAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateAvailabilityUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAvailabilityUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateAvailabilityUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAvailabilityUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetGameByIdGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameByIdGame" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetGameByIdGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameByIdGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGame" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGame" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeleteGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGame" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeleteGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetRoleByIdRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleByIdRole" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetRoleByIdRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleByIdRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRole" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRole" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeleteRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeleteRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetGameUserByIdGameUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameUserByIdGameUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetGameUserByIdGameUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameUserByIdGameUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddGameUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGameUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddGameUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGameUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateGameUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGameUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdateGameUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGameUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeleteGameUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGameUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeleteGameUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGameUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetPieceByIdPiece_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPieceByIdPiece" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetPieceByIdPiece_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPieceByIdPieceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddPiece_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPiece" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_AddPiece_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPieceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdatePiece_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePiece" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_UpdatePiece_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePieceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeletePiece_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePiece" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_DeletePiece_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePieceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceSynchroCheckers">
+    <wsdl:operation name="GetUserByIdUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetUserByIdUser" message="tns:IServiceSynchroCheckers_GetUserByIdUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetUserByIdUserResponse" message="tns:IServiceSynchroCheckers_GetUserByIdUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddUser" message="tns:IServiceSynchroCheckers_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddUserResponse" message="tns:IServiceSynchroCheckers_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateUser" message="tns:IServiceSynchroCheckers_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateUserResponse" message="tns:IServiceSynchroCheckers_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeleteUser" message="tns:IServiceSynchroCheckers_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeleteUserResponse" message="tns:IServiceSynchroCheckers_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersAvailable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetUsersAvailable" message="tns:IServiceSynchroCheckers_GetUsersAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetUsersAvailableResponse" message="tns:IServiceSynchroCheckers_GetUsersAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAvailabilityUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateAvailabilityUser" message="tns:IServiceSynchroCheckers_UpdateAvailabilityUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateAvailabilityUserResponse" message="tns:IServiceSynchroCheckers_UpdateAvailabilityUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGameByIdGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetGameByIdGame" message="tns:IServiceSynchroCheckers_GetGameByIdGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetGameByIdGameResponse" message="tns:IServiceSynchroCheckers_GetGameByIdGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddGame" message="tns:IServiceSynchroCheckers_AddGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddGameResponse" message="tns:IServiceSynchroCheckers_AddGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateGame" message="tns:IServiceSynchroCheckers_UpdateGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateGameResponse" message="tns:IServiceSynchroCheckers_UpdateGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeleteGame" message="tns:IServiceSynchroCheckers_DeleteGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeleteGameResponse" message="tns:IServiceSynchroCheckers_DeleteGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleByIdRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetRoleByIdRole" message="tns:IServiceSynchroCheckers_GetRoleByIdRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetRoleByIdRoleResponse" message="tns:IServiceSynchroCheckers_GetRoleByIdRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddRole" message="tns:IServiceSynchroCheckers_AddRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddRoleResponse" message="tns:IServiceSynchroCheckers_AddRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateRole" message="tns:IServiceSynchroCheckers_UpdateRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateRoleResponse" message="tns:IServiceSynchroCheckers_UpdateRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeleteRole" message="tns:IServiceSynchroCheckers_DeleteRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeleteRoleResponse" message="tns:IServiceSynchroCheckers_DeleteRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGameUserByIdGameUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetGameUserByIdGameUser" message="tns:IServiceSynchroCheckers_GetGameUserByIdGameUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetGameUserByIdGameUserResponse" message="tns:IServiceSynchroCheckers_GetGameUserByIdGameUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGameUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddGameUser" message="tns:IServiceSynchroCheckers_AddGameUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddGameUserResponse" message="tns:IServiceSynchroCheckers_AddGameUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGameUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateGameUser" message="tns:IServiceSynchroCheckers_UpdateGameUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdateGameUserResponse" message="tns:IServiceSynchroCheckers_UpdateGameUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGameUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeleteGameUser" message="tns:IServiceSynchroCheckers_DeleteGameUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeleteGameUserResponse" message="tns:IServiceSynchroCheckers_DeleteGameUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPieceByIdPiece">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetPieceByIdPiece" message="tns:IServiceSynchroCheckers_GetPieceByIdPiece_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetPieceByIdPieceResponse" message="tns:IServiceSynchroCheckers_GetPieceByIdPiece_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPiece">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddPiece" message="tns:IServiceSynchroCheckers_AddPiece_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/AddPieceResponse" message="tns:IServiceSynchroCheckers_AddPiece_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePiece">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdatePiece" message="tns:IServiceSynchroCheckers_UpdatePiece_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/UpdatePieceResponse" message="tns:IServiceSynchroCheckers_UpdatePiece_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePiece">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeletePiece" message="tns:IServiceSynchroCheckers_DeletePiece_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/DeletePieceResponse" message="tns:IServiceSynchroCheckers_DeletePiece_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceSynchroCheckers" type="tns:IServiceSynchroCheckers">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserByIdUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/GetUserByIdUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersAvailable">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/GetUsersAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAvailabilityUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/UpdateAvailabilityUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameByIdGame">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/GetGameByIdGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGame">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/AddGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGame">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/UpdateGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGame">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/DeleteGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleByIdRole">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/GetRoleByIdRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/AddRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/UpdateRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameUserByIdGameUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/GetGameUserByIdGameUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGameUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/AddGameUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGameUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/UpdateGameUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGameUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/DeleteGameUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPieceByIdPiece">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/GetPieceByIdPiece" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPiece">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/AddPiece" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePiece">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/UpdatePiece" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePiece">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/DeletePiece" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceSynchroCheckers">
+    <wsdl:port name="BasicHttpBinding_IServiceSynchroCheckers" binding="tns:BasicHttpBinding_IServiceSynchroCheckers">
+      <soap:address location="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
