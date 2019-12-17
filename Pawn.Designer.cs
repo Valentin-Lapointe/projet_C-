@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "Pawn";
-            this.Size = new System.Drawing.Size(228, 238);
+            this.Size = new System.Drawing.Size(70, 70);
             this.ResumeLayout(false);
 
         }
