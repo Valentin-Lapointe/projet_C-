@@ -16,7 +16,7 @@ namespace CheckersClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CheckerboardForm());
+            Application.Run();
         }
     }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="53fd1b24-b69e-4739-9f69-a68e737de327" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceSynchroCheckers1.disco" MetadataType="Disco" ID="19e6e070-5196-4c4f-a2a7-4d4908fded2d" SourceId="1" SourceUrl="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?disco" />
+    <MetadataFile FileName="ServiceSynchroCheckers3.xsd" MetadataType="Schema" ID="c88acb51-3f7f-4b2a-a4d0-8a8122d2140b" SourceId="1" SourceUrl="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceSynchroCheckers31.xsd" MetadataType="Schema" ID="b9c32b71-fef7-439e-bc4f-752da02c4aed" SourceId="1" SourceUrl="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceSynchroCheckers1.wsdl" MetadataType="Wsdl" ID="33f959f1-c464-4937-bccf-f641ec54b14b" SourceId="1" SourceUrl="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?wsdl" />
+    <MetadataFile FileName="ServiceSynchroCheckers32.xsd" MetadataType="Schema" ID="77f1b068-2b98-444e-b306-be89a9bc5761" SourceId="1" SourceUrl="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

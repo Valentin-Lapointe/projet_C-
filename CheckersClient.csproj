@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,8 +51,19 @@
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CheckerboardForm.Designer.cs">
+      <DependentUpon>CheckerboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceSynchroCheckers\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Pawn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pawn.Designer.cs">
+      <DependentUpon>Pawn.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +76,39 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Tile.resx">
+      <DependentUpon>Tile.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\ServiceSynchroCheckers\CheckersClient.ServiceSynchroCheckers.Game.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceSynchroCheckers\CheckersClient.ServiceSynchroCheckers.GameUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceSynchroCheckers\CheckersClient.ServiceSynchroCheckers.Piece.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceSynchroCheckers\CheckersClient.ServiceSynchroCheckers.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceSynchroCheckers\CheckersClient.ServiceSynchroCheckers.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceSynchroCheckers\ServiceSynchroCheckers1.wsdl" />
+    <None Include="Connected Services\ServiceSynchroCheckers\ServiceSynchroCheckers3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceSynchroCheckers\ServiceSynchroCheckers31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceSynchroCheckers\ServiceSynchroCheckers32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\ServiceSynchroCheckers.Class.Game.datasource" />
+    <None Include="Properties\DataSources\ServiceSynchroCheckers.Class.GameUser.datasource" />
+    <None Include="Properties\DataSources\ServiceSynchroCheckers.Class.Piece.datasource" />
+    <None Include="Properties\DataSources\ServiceSynchroCheckers.Class.Role.datasource" />
+    <None Include="Properties\DataSources\ServiceSynchroCheckers.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +121,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceSynchroCheckers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceSynchroCheckers\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceSynchroCheckers\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceSynchroCheckers\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceSynchroCheckers\ServiceSynchroCheckers1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
