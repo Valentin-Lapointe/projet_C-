@@ -40,6 +40,7 @@
             this.flp_board.Name = "flp_board";
             this.flp_board.Size = new System.Drawing.Size(800, 800);
             this.flp_board.TabIndex = 0;
+            this.flp_board.Paint += new System.Windows.Forms.PaintEventHandler(this.flp_board_Paint);
             // 
             // CheckerboardForm
             // 

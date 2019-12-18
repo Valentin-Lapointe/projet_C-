@@ -2,6 +2,7 @@
 {
     partial class Pawn
     {
+        
         /// <summary> 
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -34,8 +35,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Location = new System.Drawing.Point(40, 40);
+            this.Margin = new System.Windows.Forms.Padding(0);
+            this.MaximumSize = new System.Drawing.Size(70, 70);
+            this.MinimumSize = new System.Drawing.Size(70, 70);
             this.Name = "Pawn";
             this.Size = new System.Drawing.Size(70, 70);
+            this.Resize += new System.EventHandler(this.Pawn_Resize);
             this.ResumeLayout(false);
 
         }
