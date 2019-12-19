@@ -91,6 +91,7 @@ namespace CheckersClient
                         Pawn pawn = new Pawn();
                         pawn.Name = string.Format("P{0}", pawnNumber);
                         pawn.BackColor = Color.Black;
+                        pawn.Side = 0;
                         boardTiles[i].Controls.Add(pawn);
                         boardTiles[i].Filled = true;
                     }
@@ -100,6 +101,7 @@ namespace CheckersClient
                         Pawn pawn = new Pawn();
                         pawn.Name = string.Format("P{0}", pawnNumber);
                         pawn.BackColor = Color.White;
+                        pawn.Side = 1;
                         boardTiles[i].Controls.Add(pawn);
                         boardTiles[i].Filled = true;
                     }
@@ -119,6 +121,7 @@ namespace CheckersClient
                             Pawn pawn = new Pawn();
                             pawn.Name = string.Format("P{0}", pawnNumber);
                             pawn.BackColor = Color.Black;
+                            pawn.Side = 0;
                             boardTiles[i].Controls.Add(pawn);
                             boardTiles[i].Filled = true;
                         }
@@ -131,6 +134,7 @@ namespace CheckersClient
                             Pawn pawn = new Pawn();
                             pawn.Name = string.Format("P{0}", pawnNumber);
                             pawn.BackColor = Color.White;
+                            pawn.Side = 1;
                             boardTiles[i].Controls.Add(pawn);
                             boardTiles[i].Filled = true;
                         }
@@ -174,8 +178,25 @@ namespace CheckersClient
         private void Pawn_Click(object sender, EventArgs e)
         {
             Pawn pawn = ((Pawn)sender);
+            bool isClicked = false;
 
-            MessageBox.Show(pawn.Name);
+            if(pawn.BackColor == Color.White || pawn.BackColor == Color.Black)
+            {
+                pawn.BackColor = Color.Gray;
+                isClicked = true;
+            }
+            else
+            {
+                isClicked = false;
+                if(pawn.Side != 0)
+                {
+                    pawn.BackColor = Color.White;
+                }
+                else
+                {
+                    pawn.BackColor = Color.Black;
+                }
+            }
         }
     }
 }

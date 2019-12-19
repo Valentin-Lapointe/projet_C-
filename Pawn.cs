@@ -13,6 +13,10 @@ namespace CheckersClient
 {
     public partial class Pawn : UserControl
     {
+        public bool isLocked = false;
+
+        public int Side = 0;
+
         public Pawn()
         {
             InitializeComponent();
