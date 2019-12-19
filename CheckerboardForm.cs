@@ -19,7 +19,7 @@ namespace CheckersClient
 
         private void CheckerboardForm_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void flp_board_Paint(object sender, PaintEventArgs e)
@@ -146,7 +146,9 @@ namespace CheckersClient
                 }
                 flp_board.Controls.Add(boardTiles[i]);
 
-                // Parcoure tous les contrôles de la case
+                
+
+                // Parcour tous les contrôles de la case
                 bool exist = false;
                 foreach (Control c in boardTiles[i].Controls)
                 {
@@ -179,13 +181,12 @@ namespace CheckersClient
             if (tile.BackColor == ColorTranslator.FromHtml("#a04f0e"))
             {
                 isClicked = true;
+                tile.BackColor = Color.LightGray;
             }
             else
-{
-
+            {
+                tile.BackColor = ColorTranslator.FromHtml("#a04f0e");
             }
-
-            MessageBox.Show(tile.Name);
         }
 
         // Fonction créée grâce au délégué, pour le click sur le pion
@@ -197,7 +198,7 @@ namespace CheckersClient
 
             if(pawn.BackColor == Color.White || pawn.BackColor == Color.Black)
             {
-                pawn.BackColor = Color.Gray;
+                pawn.BackColor = Color.LightGray;
                 isClicked = true;
             }
             else
@@ -213,7 +214,11 @@ namespace CheckersClient
                 }
             }
 
-            MessageBox.Show(pawn.Localization);
+            if (isClicked)
+            {
+              
+            }
         }
+        
     }
 }

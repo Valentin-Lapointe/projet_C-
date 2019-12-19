@@ -7,6 +7,12 @@
       <xsd:import schemaLocation="http://10.176.128.212:8080/ServiceSynchroCheckers/ServiceSynchroCheckers.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceSynchroCheckers.Classes" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IServiceSynchroCheckers_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSynchroCheckers_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
   <wsdl:message name="IServiceSynchroCheckers_GetUserByIdUser_InputMessage">
     <wsdl:part name="parameters" element="tns:GetUserByIdUser" />
   </wsdl:message>
@@ -140,6 +146,10 @@
     <wsdl:part name="parameters" element="tns:DeletePieceResponse" />
   </wsdl:message>
   <wsdl:portType name="IServiceSynchroCheckers">
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetUsers" message="tns:IServiceSynchroCheckers_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetUsersResponse" message="tns:IServiceSynchroCheckers_GetUsers_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetUserByIdUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetUserByIdUser" message="tns:IServiceSynchroCheckers_GetUserByIdUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceSynchroCheckers/GetUserByIdUserResponse" message="tns:IServiceSynchroCheckers_GetUserByIdUser_OutputMessage" />
@@ -231,6 +241,15 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceSynchroCheckers" type="tns:IServiceSynchroCheckers">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetUserByIdUser">
       <soap:operation soapAction="http://tempuri.org/IServiceSynchroCheckers/GetUserByIdUser" style="document" />
       <wsdl:input>

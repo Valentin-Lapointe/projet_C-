@@ -562,6 +562,12 @@ namespace CheckersClient.ServiceSynchroCheckers {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceSynchroCheckers.IServiceSynchroCheckers")]
     public interface IServiceSynchroCheckers {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSynchroCheckers/GetUsers", ReplyAction="http://tempuri.org/IServiceSynchroCheckers/GetUsersResponse")]
+        CheckersClient.ServiceSynchroCheckers.User[] GetUsers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSynchroCheckers/GetUsers", ReplyAction="http://tempuri.org/IServiceSynchroCheckers/GetUsersResponse")]
+        System.Threading.Tasks.Task<CheckersClient.ServiceSynchroCheckers.User[]> GetUsersAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSynchroCheckers/GetUserByIdUser", ReplyAction="http://tempuri.org/IServiceSynchroCheckers/GetUserByIdUserResponse")]
         CheckersClient.ServiceSynchroCheckers.User GetUserByIdUser(int id);
         
@@ -605,10 +611,10 @@ namespace CheckersClient.ServiceSynchroCheckers {
         System.Threading.Tasks.Task<CheckersClient.ServiceSynchroCheckers.Game> GetGameByIdGameAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSynchroCheckers/AddGame", ReplyAction="http://tempuri.org/IServiceSynchroCheckers/AddGameResponse")]
-        bool AddGame(CheckersClient.ServiceSynchroCheckers.Game game);
+        CheckersClient.ServiceSynchroCheckers.Game AddGame(CheckersClient.ServiceSynchroCheckers.Game game);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSynchroCheckers/AddGame", ReplyAction="http://tempuri.org/IServiceSynchroCheckers/AddGameResponse")]
-        System.Threading.Tasks.Task<bool> AddGameAsync(CheckersClient.ServiceSynchroCheckers.Game game);
+        System.Threading.Tasks.Task<CheckersClient.ServiceSynchroCheckers.Game> AddGameAsync(CheckersClient.ServiceSynchroCheckers.Game game);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSynchroCheckers/UpdateGame", ReplyAction="http://tempuri.org/IServiceSynchroCheckers/UpdateGameResponse")]
         bool UpdateGame(CheckersClient.ServiceSynchroCheckers.Game game);
@@ -722,6 +728,14 @@ namespace CheckersClient.ServiceSynchroCheckers {
                 base(binding, remoteAddress) {
         }
         
+        public CheckersClient.ServiceSynchroCheckers.User[] GetUsers() {
+            return base.Channel.GetUsers();
+        }
+        
+        public System.Threading.Tasks.Task<CheckersClient.ServiceSynchroCheckers.User[]> GetUsersAsync() {
+            return base.Channel.GetUsersAsync();
+        }
+        
         public CheckersClient.ServiceSynchroCheckers.User GetUserByIdUser(int id) {
             return base.Channel.GetUserByIdUser(id);
         }
@@ -778,11 +792,11 @@ namespace CheckersClient.ServiceSynchroCheckers {
             return base.Channel.GetGameByIdGameAsync(id);
         }
         
-        public bool AddGame(CheckersClient.ServiceSynchroCheckers.Game game) {
+        public CheckersClient.ServiceSynchroCheckers.Game AddGame(CheckersClient.ServiceSynchroCheckers.Game game) {
             return base.Channel.AddGame(game);
         }
         
-        public System.Threading.Tasks.Task<bool> AddGameAsync(CheckersClient.ServiceSynchroCheckers.Game game) {
+        public System.Threading.Tasks.Task<CheckersClient.ServiceSynchroCheckers.Game> AddGameAsync(CheckersClient.ServiceSynchroCheckers.Game game) {
             return base.Channel.AddGameAsync(game);
         }
         

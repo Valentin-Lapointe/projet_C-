@@ -48,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 953);
             this.Controls.Add(this.flp_board);
+            this.Location = new System.Drawing.Point(100, 20);
             this.MaximumSize = new System.Drawing.Size(1000, 1000);
             this.MinimumSize = new System.Drawing.Size(1000, 1000);
             this.Name = "CheckerboardForm";
