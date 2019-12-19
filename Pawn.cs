@@ -17,6 +17,8 @@ namespace CheckersClient
 
         public int Side = 0;
 
+        public string Localization { get; set; }
+
         public Pawn()
         {
             InitializeComponent();

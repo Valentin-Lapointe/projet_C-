@@ -92,6 +92,7 @@ namespace CheckersClient
                         pawn.Name = string.Format("P{0}", pawnNumber);
                         pawn.BackColor = Color.Black;
                         pawn.Side = 0;
+                        pawn.Localization = boardTiles[i].Name;
                         boardTiles[i].Controls.Add(pawn);
                         boardTiles[i].Filled = true;
                     }
@@ -102,6 +103,7 @@ namespace CheckersClient
                         pawn.Name = string.Format("P{0}", pawnNumber);
                         pawn.BackColor = Color.White;
                         pawn.Side = 1;
+                        pawn.Localization = boardTiles[i].Name;
                         boardTiles[i].Controls.Add(pawn);
                         boardTiles[i].Filled = true;
                     }
@@ -122,6 +124,7 @@ namespace CheckersClient
                             pawn.Name = string.Format("P{0}", pawnNumber);
                             pawn.BackColor = Color.Black;
                             pawn.Side = 0;
+                            pawn.Localization = boardTiles[i].Name;
                             boardTiles[i].Controls.Add(pawn);
                             boardTiles[i].Filled = true;
                         }
@@ -135,6 +138,7 @@ namespace CheckersClient
                             pawn.Name = string.Format("P{0}", pawnNumber);
                             pawn.BackColor = Color.White;
                             pawn.Side = 1;
+                            pawn.Localization = boardTiles[i].Name;
                             boardTiles[i].Controls.Add(pawn);
                             boardTiles[i].Filled = true;
                         }
@@ -170,6 +174,17 @@ namespace CheckersClient
         {
             Tile tile = ((Tile)sender);
 
+            bool isClicked = false;
+
+            if (tile.BackColor == ColorTranslator.FromHtml("#a04f0e"))
+            {
+                isClicked = true;
+            }
+            else
+{
+
+            }
+
             MessageBox.Show(tile.Name);
         }
 
@@ -197,6 +212,8 @@ namespace CheckersClient
                     pawn.BackColor = Color.Black;
                 }
             }
+
+            MessageBox.Show(pawn.Localization);
         }
     }
 }
