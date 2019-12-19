@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CheckersClient
+{
+    public partial class Tile : UserControl
+    {
+        public bool Filled = false;
+
+        public bool IsLocked = false;
+
+        public Tile()
+        {
+            InitializeComponent();
+        }
+
+
+    }
+}
